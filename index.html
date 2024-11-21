@@ -2,8 +2,11 @@
 <html>
 <link rel="stylesheet" type="text/css" href="css/global-styles.css">
 <link rel="stylesheet" type="text/css" href="css/slideshow.css">
+<link rel="stylesheet" type="text/css" href="css/navbar.css">
 
-<link rel="stylesheet" href="https://use.typekit.net/wvw8sro.css">
+<!--Adobe Fonts Stylesheet-->
+<link rel="stylesheet" href="https://use.typekit.net/htx1gmn.css">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,6 +32,7 @@
             <li><a href="https://discord.com" target="_blank"><i class="fab fa-discord"></i></a></ul>
         </ul>
     </nav>
+    <div class="fake-navbar"></div>
     <section>
     <div class="slideshow-container">
         <div class="slide">
@@ -67,7 +71,7 @@
         <img src="./media/header-slides/singer.jpg" alt="Alt Text" class="item-image">
         <div class="item-text">
             <div class="item-header">Our Mission</div>
-            <div class="item-subheader">Mission Tagline</div>
+           <!-- <div class="item-subheader">Mission Tagline</div> -->
 
             <div class="item-description">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
@@ -129,44 +133,41 @@
 
 <script>
 
-const slides = document.querySelectorAll(".slide");
-const dots = document.querySelectorAll(".dot");
-let currentIndex = 0;
+    const slides = document.querySelectorAll(".slide");
+    const dots = document.querySelectorAll(".dot");
+    let currentIndex = 0;
 
-function showSlide(index){
-    slides.forEach((slide, i) => {
-        
-        if (i === index) {
-        slide.style.left = "0"; }
-        else if (i<index){
-            slide.style.left = "-100%";
-        }
-        else {
-            slide.style.left = "100%";
-        }
+    function showSlide(index){
+      
+        //for each slide, tracked by index i, do the following
+        slides.forEach((slide, i) => {
+            //left offset is the difference between i location and the index 
+            slide.style.left = `${(i-index) * 100}%`;
+        });
 
+    
+
+    dots.forEach((dot, i) => {
+        //toggle "Active" only if i is equal to the index
+        dot.classList.toggle('active', i === index); 
+    });
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+    }
+
+    function goToSlide(index){
+        currentIndex = index; 
+        showSlide(currentIndex);
+    }
+
+    dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => goToSlide(i));
     });
 
-dots.forEach((dot, i) => {
-    dot.classList.toggle('active', i === index); 
-});
-}
-
-function nextSlide() {
-    currentIndex = (currentIndex + 1) % slides.length;
     showSlide(currentIndex);
-}
-
-function goToSlide(index){
-    currentIndex = index; 
-    showSlide(currentIndex);
-}
-
-dots.forEach((dot, i) => {
-    dot.addEventListener('click', () => goToSlide(i));
-});
-
-showSlide(currentIndex);
 
 
 </script>

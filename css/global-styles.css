@@ -8,49 +8,7 @@ h1 {
   font-weight: 700;
 }
 
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
-  background-color: #f5f5f5;
-  border-bottom: 2px solid #ddd;
-}
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  padding-right: 50px;
-  gap: 20px;
-}
-
-.nav-links li {
-  display: inline;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #333;
-  font-size: 1rem;
-  padding: 8px 12px;
-  transition: background-color 0.3s;
-}
-
-.nav-links a:hover {
-  background-color: #ddd;
-  border-radius: 5px;
-}
-
-.logo-image {
-  height: 50px;
-}
 
 .button {
   background-color: #000;
@@ -109,17 +67,23 @@ h1 {
 
 /* Header Styling */
 .item-header {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
   color: orange;
-  margin-bottom: 20px;
+  font-family: roc-grotesk, sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .item-subheader {
   font-size: 2rem;
   font-weight: bold;
   color: black;
+  font-size: roc-grotesk, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
+
 
 /* Description Styling */
 .item-description p {
@@ -127,6 +91,9 @@ h1 {
   color: black;
   line-height: 1.6;
   margin-bottom: 15px;
+  font-family: "roc-grotesk", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* Button Styling */
