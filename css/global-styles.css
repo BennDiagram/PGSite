@@ -1,0 +1,169 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #f5f5f5;
+  border-bottom: 2px solid #ddd;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-right: 50px;
+  gap: 20px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  padding: 8px 12px;
+  transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
+.logo-image {
+  height: 50px;
+}
+
+.button {
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  padding: 8px 12px;
+}
+
+.button p {
+  color: white;
+}
+
+.button:hover {
+  background-color: #333;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px; /* Add space between the social icons */
+}
+
+
+/* General Section Styling */
+.item-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9; /* Optional: Light background for contrast */
+}
+
+/* Container Styling */
+.item-container {
+  display: flex;
+  flex-wrap: wrap; /* Ensures responsiveness */
+  max-width: 1200px;
+  width: 100%;
+  padding: 10vh 10vw;
+}
+
+/* Image Styling */
+.item-image {
+  flex: 1;
+  max-width: 50%; /* Image takes up half the width */
+  object-fit: cover; /* Ensures the image is nicely cropped */
+  border-radius: 8px; /* Optional: Rounded corners */
+}
+
+/* Text Container Styling */
+.item-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 5vw;
+}
+
+/* Header Styling */
+.item-header {
+  font-size: 2rem;
+  font-weight: bold;
+  color: orange;
+  margin-bottom: 20px;
+}
+
+.item-subheader {
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+}
+
+/* Description Styling */
+.item-description p {
+  font-size: 1rem;
+  color: black;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Button Styling */
+.item-button {
+  align-self: flex-start; /* Align button to the left */
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.item-button:hover {
+  background-color: orange; /* Change color on hover */
+}
+
+.banner {
+  width: 100%; /* Ensures the div spans the entire page */
+  height: 40vh; /* Adjust height as needed */
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; /* Required for positioning the logo */
+  display: flex; /* Center logo with flexbox */
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+  overflow: hidden; /* Ensures content doesn’t spill out */
+}
+
+/* Centered Logo Styling */
+.centered-logo {
+  position: absolute; /* Superimposes logo on the div */
+  max-height: 80%;
+  object-fit: contain; /* Ensures logo maintains its aspect ratio */
+}

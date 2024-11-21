@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="css/global-styles.css">
+<link rel="stylesheet" type="text/css" href="css/slideshow.css">
+
+<link rel="stylesheet" href="https://use.typekit.net/wvw8sro.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Example</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <!-- For social media icons -->
+</head>
+
+
+<body>
+    <nav class="navbar">
+        <img src="./media/pg-logo.png" alt="Logo" class="logo-image">
+        <ul class="nav-links">
+            <li><a href="#mission">Our Mission</a></li>
+            <li><a href="#haven">Haven</a></li>
+            <li><a href="#studio">Studio</a></li>
+            <li><a href="#get-involved" class="button" style="color: white;">Get Involved!</a></li>
+            <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://discord.com" target="_blank"><i class="fab fa-discord"></i></a></ul>
+        </ul>
+    </nav>
+    <section>
+    <div class="slideshow-container">
+        <div class="slide">
+          <div class="slide-content">
+            <h1>"Haven" opening this January in Oakland</h1>
+            <p>Pittsburgh's newest music venue and rehearsal studio is now open in Oakland. Check out all of the concerts and upcoming events.</p>
+            <button>Upcoming Events</button>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-content">
+            <h1>Title 2</h1>
+            <p>Subtitle 2</p>
+            <button>Upcoming Events</button>
+          </div>
+        </div>
+        <div class="slide">
+            <div class="slide-content">
+              <h1>Title 3</h1>
+              <p>Subtitle 3</p>
+              <button>Upcoming Events</button>
+            </div>
+        </div>
+      
+        <div class="dots">
+          <span class="dot active" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="item-section">
+    <div class="item-container">
+        <img src="./media/header-slides/singer.jpg" alt="Alt Text" class="item-image">
+        <div class="item-text">
+            <div class="item-header">Our Mission</div>
+            <div class="item-subheader">Mission Tagline</div>
+
+            <div class="item-description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+                <p>Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.</p>
+            </div>
+            <button class="item-button">Get Involved!</button>
+        </div>
+    </div>
+    </section>
+
+    <section class="item-section">
+        <div class="item-container">
+            <div class="item-text">
+                <div class="item-header">Headline Text</div>
+                <div class="item-subheader">Mission Tagline</div>
+
+                <div class="item-description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+                    <p>Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.</p>
+                </div>
+                <button class="item-button">Get Involved!</button>
+            </div>
+            <img src="./media/header-slides/item2.png" alt="Alt Text" class="item-image">
+
+        </div>
+        </section>
+
+    <section>
+        <div class="banner" style="background-image: url(./media/pagebreak1.png);">
+            <img src="./media/havenlogo.png" alt="" class="centered-logo">
+        </div>
+    </section>
+
+    <section class="item-section">
+        <div class="item-container">
+            <img src="./media/header-slides/item3.png" alt="Alt Text" class="item-image">
+            <div class="item-text">
+                <div class="item-header">Our Mission</div>
+                <div class="item-subheader">Mission Tagline</div>
+    
+                <div class="item-description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+                    <p>Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.</p>
+                </div>
+                <button class="item-button">Get Involved!</button>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="banner" style="background-image: url(./media/banner2.png);">
+            <img src="./media/pgstudioslogo.png" alt="" class="centered-logo">
+        </div>
+    </section>
+
+</body>
+
+
+
+<script>
+
+const slides = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
+let currentIndex = 0;
+
+function showSlide(index){
+    slides.forEach((slide, i) => {
+        
+        if (i === index) {
+        slide.style.left = "0"; }
+        else if (i<index){
+            slide.style.left = "-100%";
+        }
+        else {
+            slide.style.left = "100%";
+        }
+
+    });
+
+dots.forEach((dot, i) => {
+    dot.classList.toggle('active', i === index); 
+});
+}
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+}
+
+function goToSlide(index){
+    currentIndex = index; 
+    showSlide(currentIndex);
+}
+
+dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => goToSlide(i));
+});
+
+showSlide(currentIndex);
+
+
+</script>
+
+
+<script>
+    //FORM OUTPUT
+    const scriptURL = "https://script.google.com/macros/s/AKfycbwzF6tvfbhEdv96_Hp3wRct1gQhseovMiK_PVzuVdL-MMKa2gcL4aTg_ftwEXBq3xfd4Q/exec";
+
+    document.getElementById("newsletterForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    fetch(scriptURL, { method: "POST", body: JSON.stringify(Object.fromEntries(formData)) })
+        .then(response => alert("Subscribed successfully!"))
+        .catch(error => alert("Error: " + error.message));
+    });
+    document.getElementById("contactForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    fetch(scriptURL, { method: "POST", body: JSON.stringify(Object.fromEntries(formData)) })
+        .then(response => alert("Message sent successfully!"))
+        .catch(error => alert("Error: " + error.message));
+    });
+</script>
+</html>
+
+
