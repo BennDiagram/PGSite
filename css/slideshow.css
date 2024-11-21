@@ -41,6 +41,7 @@
   color: white;
   padding-left: 10vw;
   width: 40vw;
+  max-width: 500px;
 }
 
 .slide-content h1 {
@@ -56,6 +57,9 @@
 .slide-content button {
   background-color: white;
   color: black;
+  outline: 2px solid white; /* Adds a small white outline */
+  outline: 10px;
+  max-width: 400px;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
@@ -63,6 +67,16 @@
   margin-top: 20px;
   border-radius: 4px;
 }
+
+.slide-content button:hover {
+  background-color: rgba(0, 0, 0, 0);
+  outline: 2px solid white; /* Adds a small white outline */
+  outline-color: white;
+  color: white;
+  transition: 0.3s; 
+
+}
+
 
 .dots {
   position: absolute;
