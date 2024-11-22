@@ -149,7 +149,7 @@ h1 {
   background-color: #EE7D31; /* Background color for the section */
   padding: 30px 20px;
   align-items: center; /* Center items vertically */
-  justify-content: flex-start; /* Align content to the left */
+  justify-content: center; /* Align content to the left */
 }
 
 .final-logo {
