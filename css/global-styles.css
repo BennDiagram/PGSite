@@ -36,7 +36,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f9f9f9; /* Optional: Light background for contrast */
+  background-color: #f5f5f5; /* Optional: Light background for contrast */
 }
 
 /* Container Styling */
@@ -44,16 +44,15 @@ h1 {
   display: flex;
   flex-wrap: wrap; /* Ensures responsiveness */
   max-width: 1200px;
-  width: 100%;
-  padding: 10vh 10vw;
-}
+  width: 100vw;
+  padding: 10vh 10vw}
 
 /* Image Styling */
 .item-image {
-  flex: 1;
   max-width: 50%; /* Image takes up half the width */
   object-fit: cover; /* Ensures the image is nicely cropped */
   border-radius: 8px; /* Optional: Rounded corners */
+  aspect-ratio: 1/1;
 }
 
 /* Text Container Styling */
@@ -62,16 +61,16 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 0 5vw;
+  padding: 5vh 5vw;
 }
 
 /* Header Styling */
 .item-header {
   font-size: 2.5rem;
   font-weight: bold;
-  color: orange;
+  color: #EE7D31;
   font-family: roc-grotesk, sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -113,7 +112,15 @@ h1 {
 }
 
 .item-button:hover {
-  background-color: orange; /* Change color on hover */
+  background-color: #EE7D31; /* Change color on hover */
+}
+
+.item-section:nth-child(odd) .item-image {
+  order: 1; /* image on the left for odd sections */
+}
+
+.item-section:nth-child(even) .item-image {
+  order: -1; /* image on the right for even sections */
 }
 
 .banner {
@@ -132,5 +139,251 @@ h1 {
 .centered-logo {
   position: absolute; /* Superimposes logo on the div */
   max-height: 80%;
+  width: 90vw;
   object-fit: contain; /* Ensures logo maintains its aspect ratio */
+}
+
+/* Final Section Styling */
+.final-section {
+  display: flex; /* Flexbox layout for horizontal alignment */
+  background-color: #EE7D31; /* Background color for the section */
+  padding: 30px 20px;
+  align-items: center; /* Center items vertically */
+  justify-content: flex-start; /* Align content to the left */
+}
+
+.final-logo {
+  max-width: 150px; /* Adjust logo size as needed */
+  margin-right: 30px; /* Space between logo and links */
+}
+
+.links-container {
+  display: flex;
+  flex-direction: column; /* Stack the links vertically */
+}
+
+.links-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.links-list li {
+  margin-bottom: 10px; /* Space between links */
+}
+
+.links-list a {
+  color: white; /* Link text color */
+  text-decoration: none; /* Remove underline */
+  font-size: 1.1rem; /* Adjust font size */
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.links-list a:hover {
+  color: #333; /* Darker color on hover */
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+@media screen and (max-width: 750px) {
+  .item-section {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center; /* Optional: Center text for better presentation */
+  }
+
+  .item-image {
+    width: 100%; /* Image takes full width */
+    order: 0 !important;/* Ensure images come before text */
+  }
+
+  .item-text {
+    width: 100%; /* Text also takes full width */
+  }
+}
+@media screen and (max-width: 750px)
+{
+  .item-container {
+    flex-direction: column;
+    width: 100vw;
+    padding-left: 0vw;
+    padding-right: 0vw;
+  }
+  .item-image {
+    max-width: 100%;
+    width: 100vh;
+    height: 10vh;
+    object-fit: cover;
+    object-position:50% 90%;
+    padding-bottom: 15px;
+    border-radius: 0%;
+  }
+
+  .item-image#i2 {
+    object-position:40% 50% !important;
+  }
+
+  .item-image#i3 {
+    object-position:40% 40% !important;
+  }
+  
+  .item-text{
+    display: flex;
+    width: 70vw;
+  }
+  .item-header{
+    text-align: left;
+  }
+  .item-description{
+    text-align: justify;
+  }
+  .item-container {
+    align-items: center;
+    padding-bottom: 0%;
+  }
+  .item-button {
+    align-self: auto;
+  }
+}
+
+.imsotired {
+  font-family: 'roc-grotesk', sans-serif; /* Use Roc Grotesk font */
+  font-weight: 600;
+  font-size: 10vw;
+  color: white;
+}
+
+
+
+/* INPUT FORM SHIT ---------------------------- */
+
+.input-forms h2 {
+    font-family: 'roc-grotesk', sans-serif; /* Use Roc Grotesk font */
+    font-size: 2rem; /* Adjust the size as needed */
+    color: black; /* Set text color to black */
+    margin-bottom: 20px; /* Adds spacing below the title */  
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.newsletter-signup {
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  margin: 0 auto;
+  text-align: center;
+  justify-items: center;
+  grid-column: 1;
+  grid-row: 1;
+  z-index: 2;
+  background-color: #ffe4d6eb;
+}
+
+
+.newsletter-signup h2 {
+  font-size: 5vw;
+  color: #989BD9;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  font-family: "nexa-rust-sans-black-2", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+@media (max-width: 500px) {
+.newsletter-signup h2{
+}
+}
+
+.newsletter-signup p {
+  font-size: 2.5vh;
+  width: 70%;
+  color: #555;
+  font-family: "nexa-rust-sans-black-2", sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+#interestForm {
+display: flex;
+flex-direction: column;
+padding: 30px;
+width: 90%;
+max-width: 500px;
+}
+
+
+#interestForm input, #contactForm input{
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  min-height: 4vh;
+  font-size: 2vh;
+}
+
+#interestForm button, #contactForm button {
+  padding: 10px;
+  background-color: #EE7D31;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#interestForm button:hover {
+  background-color: #834c28;
+}
+
+#contactForm input {
+padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+
+
+.name {
+display: flex;
+flex-direction: row;
+width: 100%;
+}
+
+#contactForm {
+display: flex;
+flex-direction: column;
+padding:30px;
+width: 90%;
+
+}
+
+#responseMessage {
+  margin-top: 10px;
+  font-size: 14px;
+  color: green; /* Can also use red if showing error messages */
+}
+
+
+.input-forms {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+.input-forms input {
+  font-size: 100px;
 }

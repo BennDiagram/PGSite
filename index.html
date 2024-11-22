@@ -22,15 +22,38 @@
 
 <body>
     <nav class="navbar">
-        <img src="./media/pg-logo.png" alt="Logo" class="logo-image">
-        <ul class="nav-links">
-            <li><a href="#mission">Our Mission</a></li>
-            <li><a href="#haven">Haven</a></li>
-            <li><a href="#studio">Studio</a></li>
-            <li><a href="#get-involved" class="button" style="color: white;">Get Involved!</a></li>
-            <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="https://discord.com" target="_blank"><i class="fab fa-discord"></i></a></ul>
-        </ul>
+        <a href="index.html"> <!-- Link to the home page -->
+            <img src="./media/pg-logo.png" alt="Logo" class="logo-image">
+        </a>        <div class="nav-content">
+
+            <ul class="nav-links">
+                <li><a href="#our-mission">Our Mission</a></li>
+                <li><a href="#haven">Haven</a></li>
+               <!-- <li><a href="#studio">Studio</a></li> -->
+                <li><a href="#get-involved" class="button" style="color: white;">Get Involved!</a></li>
+                <li><a href="https://www.instagram.com/haven.pgh/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://discord.gg/YnPGXRsryk" target="_blank"><i class="fab fa-discord"></i></a></ul>
+            </ul>
+        </div>
+        <div class="burger" onclick = "toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="exit">
+            <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="white"/>
+                </svg>
+        </div>
+        <div class="dropdown-menu">
+            <ul>
+                <li><a href="#our-mission">Our Mission</a></li>
+                <li><a href="#haven">Haven</a></li>
+                <li><a href="#studio">Studio</a></li>
+                <li><a href="#get-involved" class="button" style="color: white;">Get Involved!</a></li>
+            </ul>
+        </div>        
+       
     </nav>
     <div class="fake-navbar"></div>
     <section>
@@ -44,16 +67,16 @@
         </div>
         <div class="slide">
           <div class="slide-content">
-            <h1>Title 2</h1>
-            <p>Subtitle 2</p>
-            <button>Upcoming Events</button>
+            <h1>SMART REHEARSAL STUDIO CLOSE TO CAMPUS</h1>
+            <p>PG Studios will offer a daytime smart rehearsal space at the church, providing a convenient, professional, and affordable environment for musicians to rehearse and create.</p>
           </div>
         </div>
         <div class="slide">
             <div class="slide-content">
-              <h1>Title 3</h1>
-              <p>Subtitle 3</p>
-              <button>Upcoming Events</button>
+                <h1>HANDS-ON EXPERIENCE AND MUCH MORE!</h1>
+                <p>Interested in Audio Engineering, Lighting, Event Organizing,  etc? Click the link and get involved today!</p>
+                <button>Get Involved!</button>
+
             </div>
         </div>
       
@@ -66,34 +89,33 @@
       </div>
     </section>
 
-    <section class="item-section">
+    <section class="item-section" id="our-mission">
     <div class="item-container">
         <img src="./media/header-slides/singer.jpg" alt="Alt Text" class="item-image">
         <div class="item-text">
-            <div class="item-header">Our Mission</div>
+            <div class="item-header">OUR MISSION</div>
            <!-- <div class="item-subheader">Mission Tagline</div> -->
 
             <div class="item-description">
                 <p>Post Genre emerged from Oakland’s DIY music scene in 2022 with a clear mission: to create a permanent home for the arts in Oakland. Over the past two years, we’ve had the privilege of building a network of musicians, organizers, and creatives who share a common goal: to bring people together through live arts. </p>
             </div>
-            <button class="item-button">Get Involved!</button>
         </div>
     </div>
     </section>
 
-    <section class="item-section">
+    <section class="item-section" id="get-involved">
         <div class="item-container">
+            <img src="./media/header-slides/item2.png" alt="Alt Text" class="item-image" id="i2">
             <div class="item-text">
-                <div class="item-header">Headline Text</div>
-                <div class="item-subheader">Mission Tagline</div>
-
+                <div class="item-header">JOIN THE TEAM</div>
                 <div class="item-description">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
-                    <p>Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.</p>
+                    <p>Our team includes musicians, artists, sound/lighting engineers, event organizers, photographers, videographers, editors, writers. If you're passionate and willing to learn, you'll fit right in!</p>
                 </div>
-                <button class="item-button">Get Involved!</button>
+
+                <button class="item-button" onclick="window.location.href='get-involved.html';">Get Involved!</button>
+
+                
             </div>
-            <img src="./media/header-slides/item2.png" alt="Alt Text" class="item-image">
 
         </div>
         </section>
@@ -104,19 +126,21 @@
         </div>
     </section>
 
-    <section class="item-section">
+    <section class="item-section" id="haven">
         <div class="item-container">
-            <img src="./media/header-slides/item3.png" alt="Alt Text" class="item-image">
+            <img src="./media/header-slides/item3.png" alt="Alt Text" class="item-image" id="i3">
             <div class="item-text">
-                <div class="item-header">Our Mission</div>
-                <div class="item-subheader">Mission Tagline</div>
+                <div class="item-header">HAVEN</div>
     
                 <div class="item-description">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
-                    <p>Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.</p>
+                    <p>Haven is an independent performance space in the heart of Pittsburgh’s Oakland neighborhood. 
+                        Haven serves as a creative home where musicians, artists, and audiences can come together 
+                        for concerts and events in a secure and professional environment. </p>
                 </div>
-                <button class="item-button">Get Involved!</button>
-            </div>
+                <a href="https://www.havenvenue.com" target="_blank">
+                    <button class="item-button">Visit Haven!</button>
+                </a>
+                            </div>
         </div>
     </section>
 
@@ -126,9 +150,43 @@
         </div>
     </section>
 
+    <section class="item-section">
+        <div class="item-container">
+            <img src="./media/header-slides/benitoes.png" alt="Alt Text" class="item-image" id="i3">
+            <div class="item-text">
+                <div class="item-header">PG STUDIOS</div>
+    
+                <div class="item-description">
+                    <p>Starting this January, PG Studios will offer a daytime smart rehearsal space in Oakland that will provide musicians with a convenient, professional, and affordable environment to rehearse, record, and create.  PG Studios is equipped to record podcasts, live sessions, create content, and shoot photos. The 2500 sq ft former church will also be available for private events. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Final Section -->
+<section class="final-section">
+    <div class="logo-container">
+      <img src=".//media/pglogo-white.png" alt="Haven Logo" class="final-logo">
+    </div>
+    <div class="links-container">
+      <ul class="links-list">
+        <li><a href="#our-mission">Our Mission</a></li>
+        <li><a href="#haven">Haven</a></li>
+        <li><a href="#pg-studios">PG Studios</a></li>
+        <li><a href="get-involved.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </section>
+  
 </body>
 
+<script>
 
+function toggleMenu() {
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    dropdownMenu.classList.toggle('open');
+}
+</script>
 
 <script>
 
@@ -171,6 +229,13 @@
 
 </script>
 
+<script>
+document.getElementById('our-mission-nav').addEventListener('click', function() {
+  document.getElementById('section-1').scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+
+
+</script>
 
 <script>
     //FORM OUTPUT
