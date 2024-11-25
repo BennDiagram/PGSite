@@ -29,7 +29,7 @@
             <ul class="nav-links">
                 <li><a href="#our-mission">Our Mission</a></li>
                 <li><a href="#haven">Haven</a></li>
-               <!-- <li><a href="#studio">Studio</a></li> -->
+               <li><a href="#pg-studios">PG Studios</a></li>
                 <li><a href="get-involved.html" class="button" style="color: white;">Get Involved!</a></li>
                 <li><a href="https://www.instagram.com/haven.pgh/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a></li>
                 <li><a href="https://discord.gg/YnPGXRsryk" target="_blank"><i class="fab fa-discord"></i></a></ul>
@@ -45,11 +45,11 @@
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="white"/>
                 </svg>
         </div>
-        <div class="dropdown-menu">
+        <div class="dropdown-menu" onclick="toggleMenu()">
             <ul>
                 <li><a href="#our-mission">Our Mission</a></li>
                 <li><a href="#haven">Haven</a></li>
-                <li><a href="#studio">Studio</a></li>
+                <li><a href="#pg-studios">PG Studios</a></li>
                 <li><a href="get-involved.html" class="button" style="color: white;">Get Involved!</a></li>
             </ul>
         </div>        
@@ -93,7 +93,7 @@
 
     <section class="item-section" id="our-mission">
     <div class="item-container">
-        <img src="./media/header-slides/singer.jpg" alt="Alt Text" class="item-image">
+        <img src="./media/header-slides/singer.jpg" alt="Alt Text" class="item-image" id="i1">
         <div class="item-text">
             <div class="item-header">OUR MISSION</div>
            <!-- <div class="item-subheader">Mission Tagline</div> -->
@@ -130,10 +130,10 @@
 
     <section class="item-section" id="haven">
         <div class="item-container">
-            <img src="./media/header-slides/item3.png" alt="Alt Text" class="item-image" id="i3">
+            <img src="./media/header-slides/item3.png" alt="Alt Text" class="item-image" id="i4">
+
             <div class="item-text">
                 <div class="item-header">HAVEN</div>
-    
                 <div class="item-description">
                     <p>Haven is an independent performance space in the heart of Pittsburgh’s Oakland neighborhood. 
                         Haven serves as a creative home where musicians, artists, and audiences can come together 
@@ -152,14 +152,14 @@
         </div>
     </section>
 
-    <section class="item-section">
+    <section class="item-section" id="pg-studios">
         <div class="item-container">
             <img src="./media/header-slides/benitoes.png" alt="Alt Text" class="item-image" id="i3">
             <div class="item-text">
                 <div class="item-header">PG STUDIOS</div>
     
                 <div class="item-description">
-                    <p>Starting this January, PG Studios will offer a daytime smart rehearsal space in Oakland that will provide musicians with a convenient, professional, and affordable environment to rehearse, record, and create.  PG Studios is equipped to record podcasts, live sessions, create content, and shoot photos. The 2500 sq ft former church will also be available for private events. </p>
+                    <p>Starting this January, PG Studios will offer a smart rehearsal space in Oakland that will provide musicians with a convenient, professional, and affordable environment to rehearse, record, and create.  PG Studios is equipped with backline to record rehearsals, live sessions, create content, and shoot photos. The 2500 sq ft church will also be available to rent for private events. </p>
                 </div>
             </div>
         </div>
@@ -231,13 +231,7 @@ function toggleMenu() {
 
 </script>
 
-<script>
-document.getElementById('our-mission-nav').addEventListener('click', function() {
-  document.getElementById('section-1').scrollIntoView({ behavior: 'smooth', block: 'start' });
-});
 
-
-</script>
 
 <script>
     //FORM OUTPUT

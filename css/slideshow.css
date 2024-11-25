@@ -6,6 +6,7 @@
   height: 50vh;
   overflow: hidden;
   justify-content: center;
+  margin-bottom: 5vh;
 }
 
 .slide {
@@ -23,11 +24,11 @@
 }
 
 .slide:nth-child(1) {
-  background-image: url('../media/header-slides/slide1.png');
+  background-image: url('../media/lowres/slide1_lowres.jpg');
 }
 
 .slide:nth-child(2) {
-  background-image: url('../media/header-slides/slide2.png');
+  background-image: url('../media/lowres/slide2-lowres.jpg');
 }
 
 .slide:nth-child(3) {

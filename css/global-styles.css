@@ -1,6 +1,8 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+
 }
 
 h1 {
@@ -12,7 +14,7 @@ h1 {
 
 .button {
   background-color: #000;
-  color: #fff;
+  color: #f5f5f5;
   border-radius: 5px;
   padding: 8px 12px;
 }
@@ -45,7 +47,7 @@ h1 {
   flex-wrap: wrap; /* Ensures responsiveness */
   max-width: 1200px;
   width: 100vw;
-  padding: 10vh 10vw}
+  padding: 0vh 10vw 5vh}
 
 /* Image Styling */
 .item-image {
@@ -60,8 +62,8 @@ h1 {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  padding: 5vh 5vw;
+  justify-content:  center;
+  padding: 0vh 5vw 0vh;
 }
 
 /* Header Styling */
@@ -89,7 +91,6 @@ h1 {
   font-size: 1rem;
   color: black;
   line-height: 1.6;
-  margin-bottom: 15px;
   font-family: "roc-grotesk", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -99,7 +100,7 @@ h1 {
 .item-button {
   align-self: flex-start; /* Align button to the left */
   padding: 10px 20px;
-  background-color: black;
+  background-color: #EE7D31;;
   color: white;
   border: none;
   border-radius: 5px;
@@ -112,7 +113,7 @@ h1 {
 }
 
 .item-button:hover {
-  background-color: #EE7D31; /* Change color on hover */
+  background-color: black; /* Change color on hover */
 }
 
 .item-section:nth-child(odd) .item-image {
@@ -128,6 +129,7 @@ h1 {
   height: 40vh; /* Adjust height as needed */
   background-repeat: no-repeat;
   background-size: cover;
+  margin-bottom: 5vh;
   position: relative; /* Required for positioning the logo */
   display: flex; /* Center logo with flexbox */
   justify-content: center; /* Horizontal centering */
@@ -189,7 +191,9 @@ html {
   scroll-behavior: smooth;
 }
 
-
+.item-image#i3 {
+  object-position:40% 20% !important;
+}
 
 @media screen and (max-width: 750px) {
   .item-section {
@@ -217,11 +221,14 @@ html {
   .item-image {
     max-width: 100%;
     width: 100vh;
-    height: 10vh;
+    height: 25vh;
     object-fit: cover;
-    object-position:50% 90%;
-    padding-bottom: 15px;
+    padding-bottom: 5vh;
     border-radius: 0%;
+  }
+
+  .item-image#i1 {
+    object-position: 50% 10%;
   }
 
   .item-image#i2 {
@@ -229,7 +236,11 @@ html {
   }
 
   .item-image#i3 {
-    object-position:40% 40% !important;
+    object-position:40% 22% !important;
+  }
+
+  .item-image#i4 {
+    display: none;
   }
   
   .item-text{
@@ -240,11 +251,10 @@ html {
     text-align: left;
   }
   .item-description{
-    text-align: justify;
+    text-align: left;
   }
   .item-container {
     align-items: center;
-    padding-bottom: 0%;
   }
   .item-button {
     align-self: auto;
