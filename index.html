@@ -101,7 +101,7 @@
            <!-- <div class="item-subheader">Mission Tagline</div> -->
 
             <div class="item-description">
-                <p>Post Genre (PG) is a grassroots music and arts collective whose mission is to bring people together via hosting community-oriented programming and live events. . 
+                <p>Post Genre (PG) is a grassroots music and arts collective whose mission is to bring people together via hosting community-oriented programming and live events. 
                     <br><br>
                     Based out of a former church in Oakland Pittsburgh, Post Genre works to support collaboration and community by hosting concerts, workshops, networking events, and free hands-on learning opportunities in audio engineering, lighting, and event design. 
                     <br><br>
@@ -248,20 +248,37 @@ function toggleMenu() {
     //FORM OUTPUT
     const scriptURL = "https://script.google.com/macros/s/AKfycbwzF6tvfbhEdv96_Hp3wRct1gQhseovMiK_PVzuVdL-MMKa2gcL4aTg_ftwEXBq3xfd4Q/exec";
 
-    document.getElementById("newsletterForm").addEventListener("submit", (e) => {
-    e.preventDefault();
-    const formData = new FormData(e.target);
-    fetch(scriptURL, { method: "POST", body: JSON.stringify(Object.fromEntries(formData)) })
-        .then(response => alert("Subscribed successfully!"))
-        .catch(error => alert("Error: " + error.message));
+    function handleFormSubmission(formId, successMessage, errorMessage) {
+    const form = document.getElementById(formId);
+    const submitButton = form.querySelector('button[type="submit"]'); // Get the submit button
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const formData = new FormData(e.target);
+
+        // Disable the submit button
+        submitButton.disabled = true;
+        submitButton.textContent = "Submitting..."; // Optional: update button text
+
+        fetch(scriptURL, { method: "POST", body: JSON.stringify(Object.fromEntries(formData)) })
+            .then(response => {
+                alert(successMessage);
+                form.reset(); // Reset the form after successful submission
+            })
+            .catch(error => {
+                alert(errorMessage + ": " + error.message);
+            })
+            .finally(() => {
+                // Re-enable the submit button
+                submitButton.disabled = false;
+                submitButton.textContent = "Submit"; // Reset button text
+            });
     });
-    document.getElementById("contactForm").addEventListener("submit", (e) => {
-    e.preventDefault();
-    const formData = new FormData(e.target);
-    fetch(scriptURL, { method: "POST", body: JSON.stringify(Object.fromEntries(formData)) })
-        .then(response => alert("Message sent successfully!"))
-        .catch(error => alert("Error: " + error.message));
-    });
+}
+
+handleFormSubmission("newsletterForm", "Subscribed successfully!", "Error subscribing");
+handleFormSubmission("contactForm", "Message sent successfully!", "Error sending message");
+
 </script>
 </html>
 
