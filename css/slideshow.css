@@ -28,11 +28,11 @@
 }
 
 .slide:nth-child(2) {
-  background-image: url('../media/lowres/slide2-lowres.jpg');
+  background-image: url('../media/header-slides/benitoes-header.png');
 }
 
 .slide:nth-child(3) {
-    background-image: url('../media/header-slides/slide1.png');
+    background-image: url('../media/header-slides/new-team-slide-phoot.png');
   }
 
 .slide-content {
