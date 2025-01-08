@@ -24,12 +24,12 @@
     <nav class="navbar">
         <a href="index.html"> <!-- Link to the home page -->
             <img src="./media/pg-logo.png" alt="Logo" class="logo-image">
-        </a>        <div class="nav-content">
-
+        </a>       
+        <div class="nav-content">
             <ul class="nav-links">
                 <li><a href="#our-mission">About Us</a></li>
                 <li><a href="#haven">Haven</a></li>
-               <li><a href="#pg-studios">PG Studios</a></li>
+                <li><a href="#pg-studios">PG Studios</a></li>
                 <li><a href="get-involved.html" class="button" style="color: white;">Get Involved!</a></li>
                 <li><a href="https://www.instagram.com/haven.pgh/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a></li>
                 <li><a href="https://discord.gg/YnPGXRsryk" target="_blank"><i class="fab fa-discord"></i></a></ul>
@@ -52,9 +52,9 @@
                 <li><a href="#pg-studios">PG Studios</a></li>
                 <li><a href="get-involved.html" class="button" style="color: white;">Get Involved!</a></li>
             </ul>
-        </div>        
-       
+        </div>            
     </nav>
+
     <div class="fake-navbar"></div>
     <section>
     <div class="slideshow-container">
@@ -246,7 +246,7 @@ function toggleMenu() {
 
 <script>
     //FORM OUTPUT
-    const scriptURL = "https://script.google.com/macros/s/AKfycbwzF6tvfbhEdv96_Hp3wRct1gQhseovMiK_PVzuVdL-MMKa2gcL4aTg_ftwEXBq3xfd4Q/exec";
+    const scriptURL = "https://script.google.com/macros/s/AKfycbylhY4i8NHZhpL79SVtaXHDGwJaU2K7wMfEVDGlR6HIT0d1-16MZyTaGwHlcsCqSh3w/exec";
 
     function handleFormSubmission(formId, successMessage, errorMessage) {
     const form = document.getElementById(formId);
@@ -266,7 +266,7 @@ function toggleMenu() {
                 form.reset(); // Reset the form after successful submission
             })
             .catch(error => {
-                alert(errorMessage + ": " + error.message);
+                alert(errorMessage + ": ss" + error.message);
             })
             .finally(() => {
                 // Re-enable the submit button

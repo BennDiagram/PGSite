@@ -80,7 +80,7 @@
                     </div>
     </div>
     </section>
-
+<!--
     <section>
         <div class="input-forms">
             <h2 class="form-title">Artist Interest Form</h2>
@@ -97,7 +97,7 @@
             <p id="responseMessage"></p>
         </div>
     </section>
-
+-->
 
 <!-- Final Section -->
 <section class="final-section">
@@ -132,9 +132,9 @@ function toggleMenu() {
     document.getElementById("interestForm").addEventListener("submit", (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
-    fetch(scriptURL, { method: "POST", body: JSON.stringify(Object.fromEntries(formData)) })
+    fetch(scriptURL, { method: "POST", body: JSON.stringify(Object.fromEntries(formData)),})
         .then(response => alert("Message Submitted!"))
-        .catch(error => alert("Error: " + error.message));
+        .catch(error => alert("Error:" + error.message));
     });
 
 </script>
