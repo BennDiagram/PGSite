@@ -132,6 +132,8 @@ function toggleMenu() {
     const form = e.target; //sets the constant "form" as target event object, which is, yknow, the form
     const feedbackMessage = document.getElementById("feedbackMessage");
     feedbackMessage.textContent = "Submitting...";
+    feedbackMessage.style = "background-color: grey; pointer-events: none;";
+
 
     const formData = new FormData(e.target);
     fetch(scriptURL, { method: "POST", body: JSON.stringify(Object.fromEntries(formData)),})
@@ -139,6 +141,7 @@ function toggleMenu() {
           alert("Message Submitted!")
           form.reset()
           feedbackMessage.textContent = "Submit"
+          feedbackMessage.style = "background-color: #EE7D31;"
         })
         .catch(error => alert("Error:" + error.message))
         .finally(()=> {
