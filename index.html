@@ -242,44 +242,6 @@ function toggleMenu() {
 
 </script>
 
-
-
-<script>
-    //FORM OUTPUT
-    const scriptURL = "https://script.google.com/macros/s/AKfycbylhY4i8NHZhpL79SVtaXHDGwJaU2K7wMfEVDGlR6HIT0d1-16MZyTaGwHlcsCqSh3w/exec";
-
-    function handleFormSubmission(formId, successMessage, errorMessage) {
-    const form = document.getElementById(formId);
-    const submitButton = form.querySelector('button[type="submit"]'); // Get the submit button
-
-    form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const formData = new FormData(e.target);
-
-        // Disable the submit button
-        submitButton.disabled = true;
-        submitButton.textContent = "Submitting..."; // Optional: update button text
-
-        fetch(scriptURL, { method: "POST", body: JSON.stringify(Object.fromEntries(formData)) })
-            .then(response => {
-                alert(successMessage);
-                form.reset(); // Reset the form after successful submission
-            })
-            .catch(error => {
-                alert(errorMessage + ": ss" + error.message);
-            })
-            .finally(() => {
-                // Re-enable the submit button
-                submitButton.disabled = false;
-                submitButton.textContent = "Submit"; // Reset button text
-            });
-    });
-}
-
-handleFormSubmission("newsletterForm", "Subscribed successfully!", "Error subscribing");
-handleFormSubmission("contactForm", "Message sent successfully!", "Error sending message");
-
-</script>
 </html>
 
 

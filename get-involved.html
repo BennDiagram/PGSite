@@ -80,7 +80,6 @@
                     </div>
     </div>
     </section>
-<!--
     <section>
         <div class="input-forms">
             <h2 class="form-title">Artist Interest Form</h2>
@@ -92,12 +91,11 @@
                 <input type="email" id="email" name="email" placeholder="Enter your email" required>
                 <input type="link" id="link" name="link" placeholder="Link to your music" optional>
                 <textarea name="message" placeholder="Enter your message here!" required></textarea></label>
-                <button type="submit">Submit</button>
+                <button type="submit" id="feedbackMessage">Submit</button>    
             </form>
             <p id="responseMessage"></p>
         </div>
     </section>
--->
 
 <!-- Final Section -->
 <section class="final-section">
@@ -127,17 +125,32 @@ function toggleMenu() {
 
 <script>
     //FORM OUTPUT
-    const scriptURL = "https://script.google.com/macros/s/AKfycbylhY4i8NHZhpL79SVtaXHDGwJaU2K7wMfEVDGlR6HIT0d1-16MZyTaGwHlcsCqSh3w/exec";
-
+    const scriptURL = "https://script.google.com/macros/s/AKfycbxzMMWvyTtNxI9xbwuaK92kyqaV3-P1hhzZusU33jgi_LNl-jxKnJo9n0aMCxK2MsiY/exec";
     document.getElementById("interestForm").addEventListener("submit", (e) => {
     e.preventDefault();
+
+    const form = e.target; //sets the constant "form" as target event object, which is, yknow, the form
+    const feedbackMessage = document.getElementById("feedbackMessage");
+    feedbackMessage.textContent = "Submitting...";
+
     const formData = new FormData(e.target);
     fetch(scriptURL, { method: "POST", body: JSON.stringify(Object.fromEntries(formData)),})
-        .then(response => alert("Message Submitted!"))
-        .catch(error => alert("Error:" + error.message));
+        .then(response => {
+          alert("Message Submitted!")
+          form.reset()
+          feedbackMessage.textContent = "Submit"
+        })
+        .catch(error => alert("Error:" + error.message))
+        .finally(()=> {
+          setTimeout(() => {
+          }, 3000);
+        });
     });
 
-</script>
+   
+
+  </script>
+  
 
 
 
