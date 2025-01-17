@@ -123,32 +123,33 @@ function toggleMenu() {
 </script>
 
 
+
 <script>
     //FORM OUTPUT
     const scriptURL = "https://script.google.com/macros/s/AKfycbxzMMWvyTtNxI9xbwuaK92kyqaV3-P1hhzZusU33jgi_LNl-jxKnJo9n0aMCxK2MsiY/exec";
     document.getElementById("interestForm").addEventListener("submit", (e) => {
-    e.preventDefault();
+      e.preventDefault(); //keeps the page from automatically reloading the page after the form is submitted (default form behavior)
+    
+      const form = e.target; //e.target is the elemnt that triggered the event (e), which in this case is the interest form
+      const feedbackMessage = document.getElementById("feedbackMessage");
+      feedbackMessage.textContent = "Submitting...";
+      feedbackMessage.style = "background-color: grey; pointer-events: none;";
 
-    const form = e.target; //sets the constant "form" as target event object, which is, yknow, the form
-    const feedbackMessage = document.getElementById("feedbackMessage");
-    feedbackMessage.textContent = "Submitting...";
-    feedbackMessage.style = "background-color: grey; pointer-events: none;";
 
-
-    const formData = new FormData(e.target);
-    fetch(scriptURL, { method: "POST", body: JSON.stringify(Object.fromEntries(formData)),})
-        .then(response => {
-          alert("Message Submitted!")
-          form.reset()
-          feedbackMessage.textContent = "Submit"
-          feedbackMessage.style = "background-color: #EE7D31;"
-        })
-        .catch(error => alert("Error:" + error.message))
-        .finally(()=> {
-          setTimeout(() => {
-          }, 3000);
-        });
-    });
+      const formData = new FormData(e.target);
+      fetch(scriptURL, { method: "POST", body: JSON.stringify(Object.fromEntries(formData)),})
+          .then(response => {
+            alert("Message Submitted!")
+            form.reset()
+            feedbackMessage.textContent = "Submit"
+            feedbackMessage.style = "background-color: #EE7D31;"
+          })
+          .catch(error => alert("Error:" + error.message))
+          .finally(()=> {
+            setTimeout(() => {
+            }, 3000);
+          });
+      });
 
    
 
