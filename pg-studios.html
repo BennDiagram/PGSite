@@ -1,0 +1,281 @@
+<html>
+<link rel="stylesheet" type="text/css" href="css/global-styles.css">
+<link rel="stylesheet" type="text/css" href="css/slideshow.css">
+<link rel="stylesheet" type="text/css" href="css/navbar.css">
+<link rel="stylesheet" type="text/css" href="css/backline.css">
+
+
+<!--Adobe Fonts Stylesheet-->
+<link rel="stylesheet" href="https://use.typekit.net/htx1gmn.css">
+
+<!--Vercel traffic insights-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Genre Official Website</title>
+    <meta name="description" content="Music and Arts Collective, Concert Venue, and Smart Rehearsal Space Based in Pittsburgh, PA">
+
+    <link rel="icon" href="media/favicon.png" type="image/png"> <!-- For .png files -->
+
+    <title>Post Genre Official Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <!-- For social media icons -->
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html"> <!-- Link to the home page -->
+            <img src="./media/pg-logo.png" alt="Logo" class="logo-image">
+        </a>       
+        <div class="nav-content">
+            <ul class="nav-links">
+                <li><a href="#our-mission">About Us</a></li>
+                <li><a href="#haven">Haven</a></li>
+                <li><a href="#pg-studios">PG Studios</a></li>
+                <li><a href="get-involved.html" class="button" style="color: white;">Get Involved!</a></li>
+                <li><a href="https://www.instagram.com/haven.pgh/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://discord.gg/YnPGXRsryk" target="_blank"><i class="fab fa-discord"></i></a></ul>
+            </ul>
+        </div>
+        <div class="burger" onclick = "toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="exit">
+            <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="white"/>
+                </svg>
+        </div>
+        <div class="dropdown-menu" onclick="toggleMenu()">
+            <ul>
+                <li><a href="#our-mission">About Us</a></li>
+                <li><a href="#haven">Haven</a></li>
+                <li><a href="#pg-studios">PG Studios</a></li>
+                <li><a href="get-involved.html" class="button" style="color: white;">Get Involved!</a></li>
+            </ul>
+        </div>            
+    </nav>
+
+    <div class="fake-navbar"></div>
+    <section>
+    <div class="slideshow-container">
+        <div class="studio-slide" style="display: flex; justify-content: center;">
+            <div class="slide-content" style="padding: 0; width: 30cqh;">
+                <img src="/media/pgstudioslogo.png">
+            </div> 
+        </div>
+    </div>
+    </section>
+
+    <section class="item-section" id="our-mission">
+        <div class="item-container">
+            <div class="item-text">
+                <div class="item-header">Smart rehearsal studio close to campus</div>
+            <!-- <div class="item-subheader">Mission Tagline</div> -->
+                <div class="item-description">
+                    <p>Opening this February, PG Studios will offer professional rehearsal rentals close to Pitt and CMU's campus. 
+                        With our smart interface, book rentals online and let yourself in.
+                    </p>
+                </div>
+                <button>
+                    Book a rehearsal
+                </button>
+            </div>
+            <img src="./media/header-slides/singer.jpg" alt="Alt Text" class="item-image" id="i1">
+        </div>
+    </section>
+
+
+    <section class="studio-section" id="pg-studios">
+        <div class="item-container">
+            <div class="item-text">
+                <div class="item-header">How does it work?</div>
+                <div class="item-header" style="color: white;">Book Online, No Contact Needed</div>
+                <div class="number-list">
+                    <div class="number-item">
+                        <div class="number-circle">
+                            1
+                        </div>
+                        <div class="number-text">
+                            <h1>Choose a Time & Date</h1>
+                            <h2>did you know that bananas are berries?</h2>
+                        </div>
+                    </div>
+                    <div class="number-item">
+                        <div class="number-circle">
+                            2
+                        </div>
+                        <div class="number-text">
+                            <h1>noot</h1>
+                            <h2>poobening</h2>
+                        </div>
+                    </div>
+                    <div class="number-item">
+                        <div class="number-circle">
+                            3
+                        </div>
+                        <div class="number-text">
+                            <h1>ben</h1>
+                            <h2>oieurgho</h2>
+                        </div>
+                    </div>
+                    <div class="number-item">
+                        <div class="number-circle">
+                            4
+                        </div>
+                        <div class="number-text">
+                            <h1>Extend or Complete Booking</h1>
+                            <h2>Add time to your rehearsal, or book for another day</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="./media/header-slides/benitoes-cropped.png" style="height: 30cqi;">
+
+        </div>
+    </section>
+
+    
+    <section class="studio-section" id="pg-studios">
+        <div class="item-container" style="flex-direction: column;">
+            <div class="item-text" style="justify-content: center; align-items: center;">
+                <div class="item-header">OUR GEAR</div>
+            </div>
+
+            <div class="gear-list">
+                <h1>PA System</h1>
+                <h2>
+                    Behringer X32 Compact Digital Mixer <br> <br> Yamaha MG12XU 12-Channel Mixer</h2>
+            </div>
+            <div class="gear-list">
+                <h1>Amps</h1>
+                <h2>
+                    Fender Twin Reverb <br><br>
+                    Marshall DSL0CR Tube Combo Amp <br><br>
+                    Orange Rocker 15 Combo Amp <br><br>
+                    Ampeg SVT-CL Bass Head with SVT10HLF Cab <br><br>
+                    Gallien-Krueger MB150S-112 Combo Amp <br><br>
+                </h2>
+            </div>
+
+            <div class="gear-list">
+                <h1>Drums</h1>
+                <h2>
+                    Pearl Export Series 5-Piece Kit <br><br>
+                    Yamaha Stage Custom Birch 5-Piece Kit <br><br>
+                    Zildjian A Custom Cymbal Set (Hi-Hats, Crash, Ride) <br><br>
+                    Sabian XSR Series Cymbals <br><br>
+                    Tama Iron Cobra Pedals <br><br>
+                    DW 9000 Series Stands <br><br>
+                </h2>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="studio-section" id="pg-studios">
+        <div class="item-container" style="flex-direction: column;">
+            <div class="item-text" style="justify-content: center; align-items: center;">
+                <div class="item-header">OUR GEAR</div>
+            </div>
+
+            <div class="gear-list">
+                <h1>PA System</h1>
+                <h2>
+                    Behringer X32 Compact Digital Mixer <br> <br> Yamaha MG12XU 12-Channel Mixer</h2>
+            </div>
+            <div class="gear-list">
+                <h1>Amps</h1>
+                <h2>
+                    Fender Twin Reverb <br><br>
+                    Marshall DSL0CR Tube Combo Amp <br><br>
+                    Orange Rocker 15 Combo Amp <br><br>
+                    Ampeg SVT-CL Bass Head with SVT10HLF Cab <br><br>
+                    Gallien-Krueger MB150S-112 Combo Amp <br><br>
+                </h2>
+            </div>
+
+            <div class="gear-list">
+                <h1>Drums</h1>
+                <h2>
+                    Pearl Export Series 5-Piece Kit <br><br>
+                    Yamaha Stage Custom Birch 5-Piece Kit <br><br>
+                    Zildjian A Custom Cymbal Set (Hi-Hats, Crash, Ride) <br><br>
+                    Sabian XSR Series Cymbals <br><br>
+                    Tama Iron Cobra Pedals <br><br>
+                    DW 9000 Series Stands <br><br>
+                </h2>
+            </div>
+
+        </div>
+    </section>
+
+<!-- Final Section -->
+<section class="final-section">
+    <div class="logo-container">
+      <img src=".//media/pglogo-white.png" alt="Haven Logo" class="final-logo">
+    </div>
+    <div class="links-container">
+      <ul class="links-list">
+        <li><a href="#our-mission">About Us</a></li>
+        <li><a href="#haven">Haven</a></li>
+        <li><a href="#pg-studios">PG Studios</a></li>
+        <li><a href="get-involved.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </section>
+  
+</body>
+
+<script>
+
+function toggleMenu() {
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    dropdownMenu.classList.toggle('open');
+}
+</script>
+
+<script>
+
+    const slides = document.querySelectorAll(".slide");
+    const dots = document.querySelectorAll(".dot");
+    let currentIndex = 0;
+
+    function showSlide(index){
+      
+        //for each slide, tracked by index i, do the following
+        slides.forEach((slide, i) => {
+            //left offset is the difference between i location and the index 
+            slide.style.left = `${(i-index) * 100}%`;
+        });
+
+    
+
+    dots.forEach((dot, i) => {
+        //toggle "Active" only if i is equal to the index
+        dot.classList.toggle('active', i === index); 
+    });
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+    }
+
+    function goToSlide(index){
+        currentIndex = index; 
+        showSlide(currentIndex);
+    }
+
+    dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => goToSlide(i));
+    });
+
+    showSlide(currentIndex);
+
+    setInterval(nextSlide, 10000);
+
+</script>
+
+</html>

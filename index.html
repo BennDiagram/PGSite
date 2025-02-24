@@ -7,15 +7,22 @@
 <!--Adobe Fonts Stylesheet-->
 <link rel="stylesheet" href="https://use.typekit.net/htx1gmn.css">
 
+<!--Vercel traffic insights-->
+
+<script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Post Genre Official Website</title>
-    <meta name="description" content="Description">
+    <meta name="description" content="Music and Arts Collective, Concert Venue, and Smart Rehearsal Space Based in Pittsburgh, PA">
 
     <link rel="icon" href="media/favicon.png" type="image/png"> <!-- For .png files -->
 
-    <title>Navbar Example</title>
+    <title>Post Genre Official Website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <!-- For social media icons -->
 </head>
 
@@ -26,12 +33,12 @@
     <nav class="navbar">
         <a href="index.html"> <!-- Link to the home page -->
             <img src="./media/pg-logo.png" alt="Logo" class="logo-image">
-        </a>        <div class="nav-content">
-
+        </a>       
+        <div class="nav-content">
             <ul class="nav-links">
                 <li><a href="#our-mission">About Us</a></li>
                 <li><a href="#haven">Haven</a></li>
-               <li><a href="#pg-studios">PG Studios</a></li>
+                <li><a href="#pg-studios">PG Studios</a></li>
                 <li><a href="get-involved.html" class="button" style="color: white;">Get Involved!</a></li>
                 <li><a href="https://www.instagram.com/haven.pgh/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a></li>
                 <li><a href="https://discord.gg/YnPGXRsryk" target="_blank"><i class="fab fa-discord"></i></a></ul>
@@ -103,12 +110,12 @@
            <!-- <div class="item-subheader">Mission Tagline</div> -->
 
             <div class="item-description">
-                <p>Post Genre (PG) is a grassroots music and arts collective whose mission is to bring people together via hosting community-oriented programming and live events. 
+                <p>Post Genre is a grassroots music and arts collective with a mission to unite people through community-oriented programming and live events. 
                     <br><br>
-                    Based out of a former church in Oakland Pittsburgh, Post Genre works to support collaboration and community by hosting concerts, workshops, networking events, and free hands-on learning opportunities in audio engineering, lighting, and event design. 
+                    Located at <a href="https://www.havenvenue.com" target="_blank">Haven</a>, a former church in Oakland, Pittsburgh, Post Genre works to support collaboration and community by hosting concerts, workshops, networking events, and free hands-on learning opportunities in audio engineering, lighting, and event design.
                     <br><br>
                     Alongside hosting a concert and event space–equipped with professional, in-house lighting and sound equipment–the collective also houses PG Studios: a 2,500-square-foot multipurpose studio and rehearsal space for creators.
-                    </p>
+                </p>
             </div>
         </div>
     </div>
@@ -244,44 +251,6 @@ function toggleMenu() {
 
 </script>
 
-
-
-<script>
-    //FORM OUTPUT
-    const scriptURL = "https://script.google.com/macros/s/AKfycbwzF6tvfbhEdv96_Hp3wRct1gQhseovMiK_PVzuVdL-MMKa2gcL4aTg_ftwEXBq3xfd4Q/exec";
-
-    function handleFormSubmission(formId, successMessage, errorMessage) {
-    const form = document.getElementById(formId);
-    const submitButton = form.querySelector('button[type="submit"]'); // Get the submit button
-
-    form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const formData = new FormData(e.target);
-
-        // Disable the submit button
-        submitButton.disabled = true;
-        submitButton.textContent = "Submitting..."; // Optional: update button text
-
-        fetch(scriptURL, { method: "POST", body: JSON.stringify(Object.fromEntries(formData)) })
-            .then(response => {
-                alert(successMessage);
-                form.reset(); // Reset the form after successful submission
-            })
-            .catch(error => {
-                alert(errorMessage + ": " + error.message);
-            })
-            .finally(() => {
-                // Re-enable the submit button
-                submitButton.disabled = false;
-                submitButton.textContent = "Submit"; // Reset button text
-            });
-    });
-}
-
-handleFormSubmission("newsletterForm", "Subscribed successfully!", "Error subscribing");
-handleFormSubmission("contactForm", "Message sent successfully!", "Error sending message");
-
-</script>
 </html>
 
 

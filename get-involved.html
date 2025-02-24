@@ -7,6 +7,14 @@
 <!--Adobe Fonts Stylesheet-->
 <link rel="stylesheet" href="https://use.typekit.net/htx1gmn.css">
 
+<!--Vercel traffic insights-->
+<script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,7 +38,7 @@
             <ul class="nav-links">
                 <li><a href="index.html#our-mission">About Us</a></li>
                 <li><a href="https://www.havenvenue.com">Haven</a></li>
-                <li><a href="index.html#pg-studios">PG Studios</a></li>
+                <li><a href="pg-studios.html">PG Studios</a></li>
                <!-- <li><a href="#studio">Studio</a></li> -->
                 <li><a href="get-involved.html" class="button" style="color: white;">Get Involved!</a></li>
                 <li><a href="https://www.instagram.com/haven.pgh/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a></li>
@@ -50,7 +58,7 @@
         <div class="dropdown-menu">
             <ul>
                 <li><a href="https://havenvenue.com">Haven</a></li>
-                <li><a href="index.html">PG Studios</a></li>
+                <li><a href="pg-studios.html">PG Studios</a></li>
                 <li><a href="get-involved.html" class="button" style="color: white;">Get Involved!</a></li>
             </ul>
         </div>        
@@ -80,7 +88,6 @@
                     </div>
     </div>
     </section>
-
     <section>
         <div class="input-forms">
             <h2 class="form-title">Artist Interest Form</h2>
@@ -92,12 +99,11 @@
                 <input type="email" id="email" name="email" placeholder="Enter your email" required>
                 <input type="link" id="link" name="link" placeholder="Link to your music" optional>
                 <textarea name="message" placeholder="Enter your message here!" required></textarea></label>
-                <button type="submit">Submit</button>
+                <button type="submit" id="feedbackMessage">Submit</button>    
             </form>
             <p id="responseMessage"></p>
         </div>
     </section>
-
 
 <!-- Final Section -->
 <section class="final-section">
@@ -108,7 +114,7 @@
       <ul class="links-list">
         <li><a href="https://www.havenvenue.com">Haven</a></li>
         <li><a href="index.html#our-mission">About Us</a></li>
-        <li><a href="index.html#pg-studios">PG Studios</a></li>
+        <li><a href="pg-studios.html">PG Studios</a></li>
         <li><a href="get-involved.html">Contact Us</a></li>
       </ul>
     </div>
@@ -125,19 +131,38 @@ function toggleMenu() {
 </script>
 
 
+
 <script>
     //FORM OUTPUT
-    const scriptURL = "https://script.google.com/macros/s/AKfycbylhY4i8NHZhpL79SVtaXHDGwJaU2K7wMfEVDGlR6HIT0d1-16MZyTaGwHlcsCqSh3w/exec";
-
+    const scriptURL = "https://script.google.com/macros/s/AKfycbyCZOUoghnSPWvuqSZ82Q84XItfndIGViDMiJ4tf_3mzn2aohrRtkx-AI9_Hv5lVpQ9OQ/exec";
     document.getElementById("interestForm").addEventListener("submit", (e) => {
-    e.preventDefault();
-    const formData = new FormData(e.target);
-    fetch(scriptURL, { method: "POST", body: JSON.stringify(Object.fromEntries(formData)) })
-        .then(response => alert("Message Submitted!"))
-        .catch(error => alert("Error: " + error.message));
-    });
+      e.preventDefault(); //keeps the page from automatically reloading the page after the form is submitted (default form behavior)
+    
+      const form = e.target; //e.target is the elemnt that triggered the event (e), which in this case is the interest form
+      const feedbackMessage = document.getElementById("feedbackMessage");
+      feedbackMessage.textContent = "Submitting...";
+      feedbackMessage.style = "background-color: grey; pointer-events: none;";
 
-</script>
+
+      const formData = new FormData(e.target);
+      fetch(scriptURL, { method: "POST", body: JSON.stringify(Object.fromEntries(formData)),})
+          .then(response => {
+            alert("Message Submitted!")
+            form.reset()
+            feedbackMessage.textContent = "Submit"
+            feedbackMessage.style = "background-color: #EE7D31;"
+          })
+          .catch(error => alert("Error:" + error.message))
+          .finally(()=> {
+            setTimeout(() => {
+            }, 3000);
+          });
+      });
+
+   
+
+  </script>
+  
 
 
 
