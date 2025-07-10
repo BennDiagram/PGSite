@@ -37,8 +37,11 @@ h1 {
 }
 
 .text-and-image {
-  display: flex;
-  /* gap: 64px; */
+  display: grid;
+  grid-template-columns: auto auto; /* Adjust column ratio as needed */
+  grid-template-rows: auto auto;
+  gap: 1rem; /* Optional spacing */
+  align-items: start; /* gap: 64px; */
   justify-content: center;
   align-items: start;
   padding: 16px 12px;
@@ -50,11 +53,21 @@ h1 {
   /* height: 500px; */
   display: flex;
   justify-content: center;
+  grid-row: 1 / span 2; /* Span both rows */
+  grid-column: 1;
+  align-self: center;
 }
 
 .text-and-image img {
   width: 300px;
   height: 300px;
+}
+
+.text-and-image h2 {
+  grid-row: 1;
+  grid-column: 2;
+  margin: 0;
+  align-self: end;
 }
 
 .text-container {
@@ -63,6 +76,18 @@ h1 {
   flex-direction: column;
   width: 450px;
   font-family: "roc-grotesk";
+  grid-row: 2;
+  grid-column: 2;
+  align-self: start;
+}
+
+.text-and-image.flipped .image-container {
+  grid-column: 2;
+}
+
+.text-and-image.flipped h2,
+.text-and-image.flipped .text-container {
+  grid-column: 1;
 }
 
 p {
@@ -98,6 +123,21 @@ a {
   opacity: 70%;
 }
 
+@media (max-width: 937px) {
+  .text-container {
+    width: 300px;
+  }
+
+  .image-container {
+    width: 300px;
+  }
+
+  .text-and-image img {
+    width: 250px;
+    height: 250px;
+  }
+}
+
 @media (max-width: 650px) {
   h1 {
     font-size: 30px;
@@ -108,13 +148,16 @@ a {
   }
 
   .text-and-image {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: 20px;
+    grid-template-columns: 150px 150px; /* Keep two columns */
+    grid-template-rows: auto auto;
+    text-align: center;
+    justify-items: center;
+    align-content: center;
+    padding: 24px;
+    column-gap: 20px;
   }
 
-  img {
+  .text-and-image img {
     width: 150px;
     height: 150px;
   }
@@ -122,10 +165,33 @@ a {
   .text-container {
     width: 100%;
     padding: 16px 12px;
+    grid-row: 2;
+    grid-column: 1 / span 2;
+  }
+
+  .text-and-image.flipped .text-container {
+    grid-column: 1 / span 2;
+  }
+
+  .text-and-image.flipped .image-container {
+    grid-column: 1;
+  }
+
+  .text-and-image.flipped h2 {
+    grid-column: 2;
+  }
+
+  .text-and-image h2 {
+    grid-row: 1;
+    grid-column: 1;
+    font-size: 20px;
+    align-self: center;
   }
 
   .image-container {
-    justify-self: flex-end;
+    justify-self: center;
+    grid-row: 1;
+    grid-column: 2;
   }
 
   .container {
