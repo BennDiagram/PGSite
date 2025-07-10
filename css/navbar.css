@@ -48,6 +48,12 @@
   height: 50px;
 }
 
+@media (max-width: 650px) {
+  .logo-image {
+    width: 80px;
+  }
+}
+
 .navbar {
   position: fixed;
   top: 0;
