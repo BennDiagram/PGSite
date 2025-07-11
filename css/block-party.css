@@ -62,6 +62,8 @@ h1 {
   width: 300px;
   height: 300px;
   border-radius: 12px;
+  object-fit: cover;
+  position: center;
 }
 
 .text-and-image h2 {
@@ -101,6 +103,8 @@ h2 {
   font-weight: bolder;
   padding: 0px;
   margin: 0px;
+  font-family: "roc-grotesk";
+  color: #ee7d31;
 }
 
 .block-party-button {
@@ -160,8 +164,8 @@ a {
   }
 
   .text-and-image img {
-    width: 150px;
-    height: 150px;
+    width: 175px;
+    height: 175px;
     border-radius: 6px;
   }
 
