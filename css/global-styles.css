@@ -1,16 +1,20 @@
+@font-face {
+  font-family: "Nexarust";
+  src: url("/NexaRustSans-Trial-Black2.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;
-
 }
 
 h1 {
   text-transform: uppercase;
   font-weight: 700;
 }
-
-
 
 .button {
   background-color: #ee7d31;
@@ -32,7 +36,6 @@ h1 {
   gap: 15px; /* Add space between the social icons */
 }
 
-
 /* General Section Styling */
 .item-section {
   display: flex;
@@ -41,20 +44,19 @@ h1 {
   background-color: #f5f5f5; /* Optional: Light background for contrast */
 }
 
-.studio-section  {
+.studio-section {
   background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-@media screen and (max-width:750px) {
+@media screen and (max-width: 750px) {
   .item-container img {
     display: none;
   }
 }
 .studio-section img {
-
 }
 
 /* Container Styling */
@@ -65,7 +67,6 @@ h1 {
   width: 100vw;
   padding: 5vh 10vw 5vh;
   align-items: center;
-
 }
 
 /* Image Styling */
@@ -81,7 +82,7 @@ h1 {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content:  center;
+  justify-content: center;
   padding: 0vh 5vw 0vh;
 }
 
@@ -89,7 +90,7 @@ h1 {
 .item-header {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #EE7D31;
+  color: #ee7d31;
   font-family: roc-grotesk, sans-serif;
   font-weight: 600;
   font-style: normal;
@@ -103,7 +104,6 @@ h1 {
   font-weight: 400;
   font-style: normal;
 }
-
 
 /* Description Styling */
 .item-description p {
@@ -119,7 +119,7 @@ h1 {
 .item-button {
   align-self: flex-start; /* Align button to the left */
   padding: 10px 20px;
-  background-color: #EE7D31;;
+  background-color: #ee7d31;
   color: white;
   border: none;
   border-radius: 5px;
@@ -166,7 +166,7 @@ h1 {
 /* Final Section Styling */
 .final-section {
   display: flex; /* Flexbox layout for horizontal alignment */
-  background-color: #EE7D31; /* Background color for the section */
+  background-color: #ee7d31; /* Background color for the section */
   padding: 30px 20px;
   align-items: center; /* Center items vertically */
   justify-content: center; /* Align content to the left */
@@ -204,7 +204,6 @@ h1 {
   color: #333; /* Darker color on hover */
 }
 
-
 .number-list {
   display: flex;
   flex-direction: column;
@@ -219,7 +218,8 @@ h1 {
   container-type: inline-size;
 }
 
-.number-item h1, .number-item h2 {
+.number-item h1,
+.number-item h2 {
   color: white;
   margin: 0;
   font-size: 4cqw;
@@ -241,13 +241,12 @@ h1 {
   background: #fff;
   color: #000000;
   text-align: center;
-  font: 6cqw 'roc-grotesk';
+  font: 6cqw "roc-grotesk";
   font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-
 }
 
 .gear-list {
@@ -258,7 +257,8 @@ h1 {
   width: 90%;
 }
 
-.gear-list h1, .gear-list h2{
+.gear-list h1,
+.gear-list h2 {
   color: white;
   padding: 00;
   margin: 2%;
@@ -281,7 +281,7 @@ html {
 }
 
 .item-image#i3 {
-  object-position:40% 20% !important;
+  object-position: 40% 20% !important;
 }
 
 @media screen and (max-width: 750px) {
@@ -292,15 +292,14 @@ html {
 
   .item-image {
     width: 100%; /* Image takes full width */
-    order: 0 !important;/* Ensure images come before text */
+    order: 0 !important; /* Ensure images come before text */
   }
 
   .item-text {
     width: 100%; /* Text also takes full width */
   }
 }
-@media screen and (max-width: 750px)
-{
+@media screen and (max-width: 750px) {
   .item-container {
     flex-direction: column;
     width: 100vw;
@@ -321,28 +320,28 @@ html {
   }
 
   .item-image#i2 {
-    object-position:40% 50% !important;
+    object-position: 40% 50% !important;
   }
 
   .item-image#i3 {
-    object-position:40% 22% !important;
+    object-position: 40% 22% !important;
   }
 
   .item-image#i4 {
     display: none;
   }
   .item-image#i5 {
-    object-position:40% 35% !important;
+    object-position: 40% 35% !important;
   }
-  
-  .item-text{
+
+  .item-text {
     display: flex;
     width: 70vw;
   }
-  .item-header{
+  .item-header {
     text-align: left;
   }
-  .item-description{
+  .item-description {
     text-align: left;
   }
   .item-container {
@@ -354,21 +353,19 @@ html {
 }
 
 .imsotired {
-  font-family: 'roc-grotesk', sans-serif; /* Use Roc Grotesk font */
+  font-family: "roc-grotesk", sans-serif; /* Use Roc Grotesk font */
   font-weight: 600;
   font-size: 10vw;
   color: white;
 }
 
-
-
 /* INPUT FORM SHIT ---------------------------- */
 
 .input-forms h2 {
-    font-family: 'roc-grotesk', sans-serif; /* Use Roc Grotesk font */
-    font-size: 2rem; /* Adjust the size as needed */
-    color: black; /* Set text color to black */
-    margin-bottom: 20px; /* Adds spacing below the title */  
+  font-family: "roc-grotesk", sans-serif; /* Use Roc Grotesk font */
+  font-size: 2rem; /* Adjust the size as needed */
+  color: black; /* Set text color to black */
+  margin-bottom: 20px; /* Adds spacing below the title */
 }
 
 .input-container {
@@ -395,10 +392,9 @@ html {
   background-color: #ffe4d6eb;
 }
 
-
 .newsletter-signup h2 {
   font-size: 5vw;
-  color: #989BD9;
+  color: #989bd9;
   margin-bottom: 40px;
   margin-top: 40px;
   font-family: "nexa-rust-sans-black-2", sans-serif;
@@ -406,8 +402,8 @@ html {
   font-style: normal;
 }
 @media (max-width: 500px) {
-.newsletter-signup h2{
-}
+  .newsletter-signup h2 {
+  }
 }
 
 .newsletter-signup p {
@@ -420,15 +416,15 @@ html {
 }
 
 #interestForm {
-display: flex;
-flex-direction: column;
-padding: 30px;
-width: 90%;
-max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;
 }
 
-
-#interestForm input, #contactForm input{
+#interestForm input,
+#contactForm input {
   padding: 10px;
   border-radius: 4px;
   border: 1px solid #ccc;
@@ -436,9 +432,10 @@ max-width: 500px;
   font-size: 2vh;
 }
 
-#interestForm button, #contactForm button {
+#interestForm button,
+#contactForm button {
   padding: 10px;
-  background-color: #EE7D31;
+  background-color: #ee7d31;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -452,25 +449,22 @@ max-width: 500px;
 }
 
 #contactForm input {
-padding: 10px;
+  padding: 10px;
   border-radius: 4px;
   border: 1px solid #ccc;
 }
 
-
-
 .name {
-display: flex;
-flex-direction: row;
-width: 100%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 
 #contactForm {
-display: flex;
-flex-direction: column;
-padding:30px;
-width: 90%;
-
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  width: 90%;
 }
 
 #responseMessage {
@@ -478,7 +472,6 @@ width: 90%;
   font-size: 14px;
   color: green; /* Can also use red if showing error messages */
 }
-
 
 .input-forms {
   flex-direction: column;
