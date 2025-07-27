@@ -9,7 +9,8 @@
   margin-bottom: 5vh;
 }
 
-.slide, .studio-slide {
+.slide,
+.studio-slide {
   position: absolute;
   top: 0;
   left: 100%;
@@ -26,20 +27,20 @@
 
 .studio-slide {
   left: 0%;
-  background-image: url('../media/header-slides/studio-banner.png');
+  background-image: url("../media/header-slides/studio-banner.png");
 }
 
 .slide:nth-child(1) {
-  background-image: url('../media/lowres/slide1_lowres.jpg');
+  background-image: url("../media/block_party/blockparty.JPEG");
 }
 
 .slide:nth-child(2) {
-  background-image: url('../media/header-slides/benitoes-header.png');
+  background-image: url("../media/lowres/slide1_lowres.jpg");
 }
 
 .slide:nth-child(3) {
-    background-image: url('../media/header-slides/new-team-slide-phoot.png');
-  }
+  background-image: url("../media/header-slides/new-team-slide-phoot.png");
+}
 
 .slide-content {
   display: flex;
@@ -58,7 +59,7 @@
   font-weight: 600;
   font-style: normal;
   letter-spacing: 1px;
-  line-height: 2.0rem;
+  line-height: 2rem;
 }
 
 .slide-content p {
@@ -88,10 +89,8 @@
   outline: 2px solid white; /* Adds a small white outline */
   outline-color: white;
   color: white;
-  transition: 0.3s; 
-
+  transition: 0.3s;
 }
-
 
 .dots {
   position: absolute;
@@ -111,18 +110,15 @@
   outline-color: white;
   cursor: pointer;
   outline: 2px solid white; /* Adds a small white outline */
-
 }
 
 .dot.active {
   background-color: white;
 }
 
-@media screen and (max-width: 750px)
-{
+@media screen and (max-width: 750px) {
   .slide {
     background-position: 65% 50%;
-    
   }
 
   .slideshow-container {
@@ -135,9 +131,8 @@
   }
 }
 
-@media screen and (max-width: 575px){
-
-  .slide-content{
+@media screen and (max-width: 575px) {
+  .slide-content {
     width: 80vw;
   }
 }
