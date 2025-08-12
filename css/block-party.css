@@ -48,7 +48,8 @@ h1 {
   width: 100%;
 }
 
-.image-container {
+.image-container,
+.landscape-container {
   width: 500px;
   /* height: 500px; */
   display: flex;
@@ -58,7 +59,19 @@ h1 {
   align-self: center;
 }
 
-.text-and-image img {
+.landscape-container {
+  width: 600px;
+}
+
+.landscape-container img {
+  width: 500px;
+  height: 350px;
+  border-radius: 12px;
+  object-fit: cover;
+  position: center;
+}
+
+.image-container img {
   width: 400px;
   height: 400px;
   border-radius: 12px;
@@ -85,6 +98,10 @@ h1 {
 }
 
 .text-and-image.flipped .image-container {
+  grid-column: 2;
+}
+
+.text-and-image.flipped .landscape-container {
   grid-column: 2;
 }
 
@@ -159,18 +176,32 @@ a {
   text-decoration: underline;
 }
 
-@media (max-width: 937px) {
+@media (max-width: 1000px) {
+  button {
+    margin: 12px;
+  }
   .text-container {
+    width: 350px;
+  }
+
+  .text-container p {
+    margin: 0;
+  }
+
+  .image-container,
+  .landscape-container {
     width: 300px;
   }
 
-  .image-container {
-    width: 300px;
-  }
-
-  .text-and-image img {
+  .image-container img {
     width: 250px;
     height: 250px;
+    border-radius: 9px;
+  }
+
+  .landscape-container img {
+    width: 300px;
+    height: 200px;
     border-radius: 9px;
   }
 }
@@ -185,18 +216,24 @@ a {
   }
 
   .text-and-image {
-    grid-template-columns: 150px 150px; /* Keep two columns */
+    grid-template-columns: 175px 175px; /* Keep two columns */
     grid-template-rows: auto auto;
     text-align: center;
     justify-items: center;
     align-content: center;
     padding: 24px;
-    column-gap: 20px;
+    column-gap: 8px;
   }
 
-  .text-and-image img {
+  .image-container img {
     width: 175px;
     height: 175px;
+    border-radius: 6px;
+  }
+
+  .landscape-container img {
+    width: 200px;
+    height: 150px;
     border-radius: 6px;
   }
 
@@ -215,6 +252,10 @@ a {
     grid-column: 1;
   }
 
+  .text-and-image.flipped .landscape-container {
+    grid-column: 1;
+  }
+
   .text-and-image.flipped h2 {
     grid-column: 2;
   }
@@ -224,9 +265,11 @@ a {
     grid-column: 1;
     font-size: 20px;
     align-self: center;
+    width: 150px;
   }
 
-  .image-container {
+  .image-container,
+  .landscape-container {
     justify-self: center;
     grid-row: 1;
     grid-column: 2;
