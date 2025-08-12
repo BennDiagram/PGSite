@@ -153,8 +153,10 @@ a {
   padding: 24px;
 }
 
-.sponsors-container p {
+.sponsors-container a {
   text-align: center;
+  font-size: 16px;
+  font-family: "roc-grotesk";
 }
 
 .sponsors-container h4 {
