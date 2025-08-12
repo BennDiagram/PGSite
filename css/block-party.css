@@ -128,6 +128,37 @@ a {
   opacity: 70%;
 }
 
+.sponsors-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 24px;
+}
+
+.sponsors-container p {
+  text-align: center;
+}
+
+.sponsors-container h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.sponsor-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.sponsor-list a {
+  color: black;
+  text-decoration: none;
+}
+
+.sponsor-list a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 937px) {
   .text-container {
     width: 300px;
