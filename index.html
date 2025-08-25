@@ -11,114 +11,142 @@
 
 <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-  </script>
-  <script defer src="/_vercel/insights/script.js"></script>
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Post Genre Official Website</title>
-    <meta name="description" content="Music and Arts Collective, Concert Venue, and Smart Rehearsal Space Based in Pittsburgh, PA">
+    <meta name="description"
+        content="Music and Arts Collective, Concert Venue, and Smart Rehearsal Space Based in Pittsburgh, PA">
 
     <link rel="icon" href="media/favicon.png" type="image/png"> <!-- For .png files -->
 
     <title>Post Genre Official Website</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <!-- For social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- For social media icons -->
 </head>
 
 
 <body>
 
-    
+
     <nav class="navbar">
         <a href="index.html"> <!-- Link to the home page -->
             <img src="./media/pg-logo.png" alt="Logo" class="logo-image">
-        </a>       
+        </a>
         <div class="nav-content">
             <ul class="nav-links">
                 <li><a href="#our-mission">About Us</a></li>
                 <li><a href="#haven">Haven</a></li>
                 <li><a href="#pg-studios">PG Studios</a></li>
+                <li><a href="/blockparty" class="button" style="color: white;">OBP '25</a></li>
                 <li><a href="get-involved.html" class="button" style="color: white;">Get Involved!</a></li>
-                <li><a href="https://www.instagram.com/haven.pgh/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="https://discord.gg/YnPGXRsryk" target="_blank"><i class="fab fa-discord"></i></a></ul>
+                <li><a href="https://www.instagram.com/haven.pgh/?hl=en" target="_blank"><i
+                            class="fab fa-instagram"></i></a></li>
+                <li><a href="https://discord.gg/YnPGXRsryk" target="_blank"><i class="fab fa-discord"></i></a>
+            </ul>
             </ul>
         </div>
-        <div class="burger" onclick = "toggleMenu()">
+        <div class="burger" onclick="toggleMenu()">
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
         </div>
         <div class="exit">
             <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="white"/>
-                </svg>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z"
+                    fill="white" />
+            </svg>
         </div>
         <div class="dropdown-menu" onclick="toggleMenu()">
             <ul>
                 <li><a href="#our-mission">About Us</a></li>
                 <li><a href="#haven">Haven</a></li>
                 <li><a href="#pg-studios">PG Studios</a></li>
+                <li><a href="/blockparty/" class="button" style="color: white;">OBP '25</a></li>
                 <li><a href="get-involved.html" class="button" style="color: white;">Get Involved!</a></li>
             </ul>
-        </div>            
+        </div>
     </nav>
 
     <div class="fake-navbar"></div>
     <section>
-    <div class="slideshow-container">
-        <div class="slide">
-          <div class="slide-content">
-            <h1>"Haven" opening this January in Oakland</h1>
-            <p>Pittsburgh’s newest space for live music has found a home in Oakland. Stay tuned for news about upcoming concerts and events!</p>
-            <button onclick="window.location.href='https://www.havenvenue.com';">Visit HAVEN</button>
-        </div> 
-        </div>
-        <div class="slide">
-          <div class="slide-content">
-            <h1>REHEARSALS MADE EASY, JUST A CLICK AWAY</h1>
-            <p>Starting this January, PG Studios will offer smart rehearsal space, providing a convenient, professional, and affordable environment for musicians to rehearse and create.
-            </p>
-          </div>
-        </div>
-        <div class="slide">
-            <div class="slide-content">
-                <h1>HANDS-ON EXPERIENCE AND MUCH MORE!</h1>
-                <p>Interested in audio engineering, lighting, and other aspects of event production? Learn more and get involved today!
-                </p>
-                <a href="get-involved.html">
-                    <button>Get Involved!</button>
-                </a>
-                
+        <div class="slideshow-container">
+            <div class="slide">
+                <div class="slide-content">
+                    <h1>"Oakland Block Party" on August 20th</h1>
+                    <p>Join us for a FREE all-day music festival on Schenley Drive, featuring seven local bands and a
+                        wide
+                        range of vendors!</p>
+                    <button onclick="window.location.href='/blockparty'">OBP '25</button>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide-content">
+                    <h1>"Haven" open now in Oakland</h1>
+                    <p>Pittsburgh’s newest space for live music has found a home in Oakland. Visit <a
+                            href="https://www.havenvenue.com"
+                            style="text-decoration: none; color: white;"><i>havenvenue.com</i></a> for
+                        news about upcoming concerts and events!</p>
+                    <button onclick="window.location.href='https://www.havenvenue.com';">Visit HAVEN</button>
+                </div>
+            </div>
+            <!-- <div class="slide">
+                <div class="slide-content">
+                    <h1>REHEARSALS MADE EASY, JUST A CLICK AWAY</h1>
+                    <p>Coming soon, PG Studios will offer smart rehearsal space, providing a convenient,
+                        professional, and affordable environment for musicians to rehearse and create.
+                    </p>
+                </div>
+            </div> -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h1>HANDS-ON EXPERIENCE AND MUCH MORE!</h1>
+                    <p>Interested in audio engineering, lighting, and other aspects of event production? Learn more and
+                        get involved today!
+                    </p>
+                    <a href="get-involved.html">
+                        <button>Get Involved!</button>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+
             </div>
         </div>
-      
-        <div class="dots">
-          <span class="dot active" data-index="0"></span>
-          <span class="dot" data-index="1"></span>
-          <span class="dot" data-index="2"></span>
-
-        </div>
-      </div>
     </section>
 
     <section class="item-section" id="our-mission">
-    <div class="item-container">
-        <img src="./media/header-slides/singer.jpg" alt="Alt Text" class="item-image" id="i1">
-        <div class="item-text">
-            <div class="item-header">ABOUT US</div>
-           <!-- <div class="item-subheader">Mission Tagline</div> -->
+        <div class="item-container">
+            <img src="./media/header-slides/singer.jpg" alt="Alt Text" class="item-image" id="i1">
+            <div class="item-text">
+                <div class="item-header">ABOUT US</div>
+                <!-- <div class="item-subheader">Mission Tagline</div> -->
 
-            <div class="item-description">
-                <p>Post Genre is a grassroots music and arts collective with a mission to unite people through community-oriented programming and live events. 
-                    <br><br>
-                    Located at <a href="https://www.havenvenue.com" target="_blank">Haven</a>, a former church in Oakland, Pittsburgh, Post Genre works to support collaboration and community by hosting concerts, workshops, networking events, and free hands-on learning opportunities in audio engineering, lighting, and event design.
-                    <br><br>
-                    Alongside hosting a concert and event space–equipped with professional, in-house lighting and sound equipment–the collective also houses PG Studios: a 2,500-square-foot multipurpose studio and rehearsal space for creators.
-                </p>
+                <div class="item-description">
+                    <p>Post Genre is a grassroots music and arts collective with a mission to unite people through
+                        community-oriented programming and live events.
+                        <br><br>
+                        Located at <a href="https://www.havenvenue.com" target="_blank">Haven</a>, a former church in
+                        Oakland, Pittsburgh, Post Genre works to support collaboration and community by hosting
+                        concerts, workshops, networking events, and free hands-on learning opportunities in audio
+                        engineering, lighting, and event design.
+                        <br><br>
+                        Alongside hosting a concert and event space–equipped with professional, in-house lighting and
+                        sound equipment–the collective also houses PG Studios: a 2,500-square-foot multipurpose studio
+                        and rehearsal space for creators.
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
     </section>
 
     <section class="item-section" id="get-involved">
@@ -127,16 +155,18 @@
             <div class="item-text">
                 <div class="item-header">JOIN THE TEAM</div>
                 <div class="item-description">
-                    <p>Our team includes musicians, artists, audio engineers, lighting designers, event organizers, photographers, videographers, editors, and writers. If you're passionate and willing to learn, you'll fit right in!</p>
+                    <p>Our team includes musicians, artists, audio engineers, lighting designers, event organizers,
+                        photographers, videographers, editors, and writers. If you're passionate and willing to learn,
+                        you'll fit right in!</p>
                 </div>
 
                 <button class="item-button" onclick="window.location.href='get-involved.html';">Get Involved!</button>
 
-                
+
             </div>
 
         </div>
-        </section>
+    </section>
 
     <section>
         <div class="banner" style="background-image: url(./media/pagebreak1.png);">
@@ -154,10 +184,12 @@
                 </div>
                 <div class="item-description">
                     <p>
-                        <a href="https://www.havenvenue.com" target="_blank"><b><i>Haven</i></b></a> is an independent performance space in the heart of Pittsburgh’s Oakland neighborhood. 
-                        Haven serves as a creative home where musicians, artists, and audiences can come together for concerts and events.
-                      </p>
-                                      </div>
+                        <a href="https://www.havenvenue.com" target="_blank"><b><i>Haven</i></b></a> is an independent
+                        performance space in the heart of Pittsburgh’s Oakland neighborhood.
+                        Haven serves as a creative home where musicians, artists, and audiences can come together for
+                        concerts and events.
+                    </p>
+                </div>
                 <a href="https://www.havenvenue.com" target="_blank">
                     <button class="item-button">Visit HAVEN</button>
                 </a>
@@ -176,37 +208,41 @@
             <img src="./media/header-slides/benitoes.png" alt="Alt Text" class="item-image" id="i3">
             <div class="item-text">
                 <div class="item-header">PG STUDIOS</div>
-    
+
                 <div class="item-description">
-                    <p>Starting this January, PG Studios will offer a smart rehearsal space in Oakland that will provide musicians with a convenient, professional, and affordable environment to rehearse, record, and create.  PG Studios is equipped with backline to record rehearsals, live sessions, create content, and shoot photos. The 2500 sq ft church will also be available to rent for private events. </p>
+                    <p>Starting this January, PG Studios will offer a smart rehearsal space in Oakland that will provide
+                        musicians with a convenient, professional, and affordable environment to rehearse, record, and
+                        create. PG Studios is equipped with backline to record rehearsals, live sessions, create
+                        content, and shoot photos. The 2500 sq ft church will also be available to rent for private
+                        events. </p>
                 </div>
             </div>
         </div>
     </section>
 
-<!-- Final Section -->
-<section class="final-section">
-    <div class="logo-container">
-      <img src=".//media/pglogo-white.png" alt="Haven Logo" class="final-logo">
-    </div>
-    <div class="links-container">
-      <ul class="links-list">
-        <li><a href="#our-mission">About Us</a></li>
-        <li><a href="#haven">Haven</a></li>
-        <li><a href="#pg-studios">PG Studios</a></li>
-        <li><a href="get-involved.html">Contact Us</a></li>
-      </ul>
-    </div>
-  </section>
-  
+    <!-- Final Section -->
+    <section class="final-section">
+        <div class="logo-container">
+            <img src=".//media/pglogo-white.png" alt="Haven Logo" class="final-logo">
+        </div>
+        <div class="links-container">
+            <ul class="links-list">
+                <li><a href="#our-mission">About Us</a></li>
+                <li><a href="#haven">Haven</a></li>
+                <li><a href="#pg-studios">PG Studios</a></li>
+                <li><a href="get-involved.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </section>
+
 </body>
 
 <script>
 
-function toggleMenu() {
-    const dropdownMenu = document.querySelector('.dropdown-menu');
-    dropdownMenu.classList.toggle('open');
-}
+    function toggleMenu() {
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+        dropdownMenu.classList.toggle('open');
+    }
 </script>
 
 <script>
@@ -215,20 +251,20 @@ function toggleMenu() {
     const dots = document.querySelectorAll(".dot");
     let currentIndex = 0;
 
-    function showSlide(index){
-      
+    function showSlide(index) {
+
         //for each slide, tracked by index i, do the following
         slides.forEach((slide, i) => {
             //left offset is the difference between i location and the index 
-            slide.style.left = `${(i-index) * 100}%`;
+            slide.style.left = `${(i - index) * 100}%`;
         });
 
-    
 
-    dots.forEach((dot, i) => {
-        //toggle "Active" only if i is equal to the index
-        dot.classList.toggle('active', i === index); 
-    });
+
+        dots.forEach((dot, i) => {
+            //toggle "Active" only if i is equal to the index
+            dot.classList.toggle('active', i === index);
+        });
     }
 
     function nextSlide() {
@@ -236,8 +272,8 @@ function toggleMenu() {
         showSlide(currentIndex);
     }
 
-    function goToSlide(index){
-        currentIndex = index; 
+    function goToSlide(index) {
+        currentIndex = index;
         showSlide(currentIndex);
     }
 
@@ -252,5 +288,3 @@ function toggleMenu() {
 </script>
 
 </html>
-
-
